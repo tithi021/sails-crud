@@ -12,13 +12,13 @@ module.exports = {
             lastName = req.param('lastName'),
             age = req.param('age');
 
-        var createperson = Person.create({
+        var person = Person.create({
             firstName: firstName,
             lastName: lastName,
             age: age
         });
 
-        createperson.exec(function(err, success) {
+        person.exec(function(err, success) {
 
             if(err) {
                 res.staus(500);
